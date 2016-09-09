@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Angular2 Project Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <base href="/">
+        <style type="text/css">
+            <!--
+            @import url( '/libs/css/style.min.css');
+            /*这里是通过@import引用CSS的样式内容*/
+            -->
+        </style>
+        <script src="/libs/js/shim.min.js"></script>
+        <script src="/libs/js/zone.js"></script>
+        <script src="/libs/js/Reflect.js"></script>
+        <script src="/libs/js/system.src.js"></script>
+        <script src="/libs/js/moment.min.js"></script>
+        <script src="web.config.js"></script>
+
+        <script>
+            System.import ('app/main').then(null, console.error.bind(console));
+        </script>
+
+    </head>
+    <body>
+        <app></app>
+    </body>
+</html>
