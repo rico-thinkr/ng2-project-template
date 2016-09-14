@@ -1,4 +1,4 @@
-System.register(['../utils/component-extensions', '../ui-elements/footer/footer.component'], function(exports_1, context_1) {
+System.register(['../../utils/module-extensions', './script.component', './script.routing'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,31 +10,34 @@ System.register(['../utils/component-extensions', '../ui-elements/footer/footer.
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var component_extensions_1, footer_component_1;
-    var App_Component;
+    var module_extensions_1, script_component_1, script_routing_1;
+    var ScriptModule;
     return {
         setters:[
-            function (component_extensions_1_1) {
-                component_extensions_1 = component_extensions_1_1;
+            function (module_extensions_1_1) {
+                module_extensions_1 = module_extensions_1_1;
             },
-            function (footer_component_1_1) {
-                footer_component_1 = footer_component_1_1;
+            function (script_component_1_1) {
+                script_component_1 = script_component_1_1;
+            },
+            function (script_routing_1_1) {
+                script_routing_1 = script_routing_1_1;
             }],
         execute: function() {
-            App_Component = (function () {
-                function App_Component() {
+            ScriptModule = (function () {
+                function ScriptModule() {
                 }
-                App_Component = __decorate([
-                    component_extensions_1.NgComponent({
-                        selector: 'app',
-                        template: "<div id=\"wrapper\">\n            <router-outlet></router-outlet>\n    </div>\n    <footer></footer>",
-                        directives: [footer_component_1.Footer_Component]
+                ScriptModule = __decorate([
+                    module_extensions_1.NgModule({
+                        imports: [module_extensions_1.CommonModule, script_routing_1.routing],
+                        declarations: [script_component_1.Script_Editor_Component],
+                        providers: []
                     }), 
                     __metadata('design:paramtypes', [])
-                ], App_Component);
-                return App_Component;
+                ], ScriptModule);
+                return ScriptModule;
             }());
-            exports_1("App_Component", App_Component);
+            exports_1("default", ScriptModule);
         }
     }
 });

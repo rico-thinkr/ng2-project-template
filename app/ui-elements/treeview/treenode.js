@@ -15,6 +15,13 @@ System.register([], function(exports_1, context_1) {
                      */
                     this._nodes = [];
                 }
+                Object.defineProperty(TreeNode.prototype, "level", {
+                    get: function () {
+                        return this.Parent == null ? 0 : this.Parent.level + 1;
+                    },
+                    enumerable: true,
+                    configurable: true
+                });
                 Object.defineProperty(TreeNode.prototype, "hasChildNodes", {
                     /**
                      *

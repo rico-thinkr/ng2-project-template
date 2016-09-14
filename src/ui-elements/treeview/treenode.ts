@@ -12,6 +12,10 @@ export class TreeNode {
     selected:boolean;
 
     tag:any;
+
+    get level():number{
+        return this.Parent==null?0:this.Parent.level+1;
+    }
     /**
      * child nodes.
      */

@@ -1,4 +1,4 @@
-System.register(['../utils/component-extensions', '../ui-elements/footer/footer.component'], function(exports_1, context_1) {
+System.register(['@angular/core'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,31 +10,27 @@ System.register(['../utils/component-extensions', '../ui-elements/footer/footer.
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var component_extensions_1, footer_component_1;
-    var App_Component;
+    var core_1;
+    var Footer_Component;
     return {
         setters:[
-            function (component_extensions_1_1) {
-                component_extensions_1 = component_extensions_1_1;
-            },
-            function (footer_component_1_1) {
-                footer_component_1 = footer_component_1_1;
+            function (core_1_1) {
+                core_1 = core_1_1;
             }],
         execute: function() {
-            App_Component = (function () {
-                function App_Component() {
+            Footer_Component = (function () {
+                function Footer_Component() {
                 }
-                App_Component = __decorate([
-                    component_extensions_1.NgComponent({
-                        selector: 'app',
-                        template: "<div id=\"wrapper\">\n            <router-outlet></router-outlet>\n    </div>\n    <footer></footer>",
-                        directives: [footer_component_1.Footer_Component]
+                Footer_Component = __decorate([
+                    core_1.Component({
+                        selector: 'footer',
+                        template: "<div class=\"footer fixed\" style=\"font-size: 10px; font-weight: 100;\">\n            <div class=\"pull-right\">\n                10GB of\n                <strong style=\"font-weight: 500\">250GB</strong>\n                Free.\n            </div>\n            <div>\n                <strong style=\"font-weight: 500\">Copyright</strong>\n                Example Company \u00A9 2014-2015\n            </div>\n    </div>\n"
                     }), 
                     __metadata('design:paramtypes', [])
-                ], App_Component);
-                return App_Component;
+                ], Footer_Component);
+                return Footer_Component;
             }());
-            exports_1("App_Component", App_Component);
+            exports_1("Footer_Component", Footer_Component);
         }
     }
 });

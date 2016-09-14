@@ -1,4 +1,4 @@
-System.register(['./utils/module-extensions', './modules/app.component', './app.routing'], function(exports_1, context_1) {
+System.register(['../../utils/module-extensions', './dashboard.component', './dashboard.routing'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,34 +10,34 @@ System.register(['./utils/module-extensions', './modules/app.component', './app.
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var Modules, app_component_1, app_routing_1;
-    var App_Module;
+    var Modules, dashboard_component_1, dashboard_routing_1;
+    var Dashboard_Module;
     return {
         setters:[
             function (Modules_1) {
                 Modules = Modules_1;
             },
-            function (app_component_1_1) {
-                app_component_1 = app_component_1_1;
+            function (dashboard_component_1_1) {
+                dashboard_component_1 = dashboard_component_1_1;
             },
-            function (app_routing_1_1) {
-                app_routing_1 = app_routing_1_1;
+            function (dashboard_routing_1_1) {
+                dashboard_routing_1 = dashboard_routing_1_1;
             }],
         execute: function() {
-            App_Module = (function () {
-                function App_Module() {
+            Dashboard_Module = (function () {
+                function Dashboard_Module() {
                 }
-                App_Module = __decorate([
+                Dashboard_Module = __decorate([
                     Modules.NgModule({
-                        imports: [Modules.BrowserModule, app_routing_1.routing],
-                        declarations: [app_component_1.App_Component],
-                        bootstrap: [app_component_1.App_Component]
+                        imports: [Modules.CommonModule, dashboard_routing_1.routing],
+                        declarations: [dashboard_component_1.Dashboard_Component],
+                        bootstrap: [dashboard_component_1.Dashboard_Component]
                     }), 
                     __metadata('design:paramtypes', [])
-                ], App_Module);
-                return App_Module;
+                ], Dashboard_Module);
+                return Dashboard_Module;
             }());
-            exports_1("App_Module", App_Module);
+            exports_1("default", Dashboard_Module);
         }
     }
 });

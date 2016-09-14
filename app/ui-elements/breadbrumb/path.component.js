@@ -11,26 +11,33 @@ System.register(['@angular/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var Script_Editor_Component;
+    var breadcrumb_Component;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            Script_Editor_Component = (function () {
-                function Script_Editor_Component() {
+            breadcrumb_Component = (function () {
+                function breadcrumb_Component() {
                 }
-                Script_Editor_Component = __decorate([
+                breadcrumb_Component.prototype.ngOnInit = function () {
+                    console.log(this.title);
+                };
+                __decorate([
+                    core_1.Input(), 
+                    __metadata('design:type', String)
+                ], breadcrumb_Component.prototype, "title", void 0);
+                breadcrumb_Component = __decorate([
                     core_1.Component({
-                        selector: "script-editor",
-                        templateUrl: "./script.component.html"
+                        selector: "breadcrumb",
+                        template: "<div class=\"row wrapper border-bottom white-bg page-heading\">\n        <div class=\"col-lg-12\">\n            <ol class=\"breadcrumb pull-left\">\n                <li>\n                    <a href=\"/\">Home</a>\n                </li>\n                <li class=\"active\">\n                    <strong>{{title}}</strong>\n                </li>\n            </ol>\n        </div>\n    </div>\n"
                     }), 
                     __metadata('design:paramtypes', [])
-                ], Script_Editor_Component);
-                return Script_Editor_Component;
+                ], breadcrumb_Component);
+                return breadcrumb_Component;
             }());
-            exports_1("Script_Editor_Component", Script_Editor_Component);
+            exports_1("breadcrumb_Component", breadcrumb_Component);
         }
     }
 });
